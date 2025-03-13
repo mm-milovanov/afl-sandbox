@@ -6,7 +6,7 @@ OPT = #-Og
 
 # pathes
 PROJECT_ROOT_DIR = .
-SRC_CODE_DIR = $(PROJECT_ROOT_DIR)/src
+AFL_DIR = ../../AFL
 BUILD_DIR = $(PROJECT_ROOT_DIR)/build
 
 # cpp defines
@@ -14,7 +14,7 @@ CPP_DEFS =
 
 # cpp sources
 CPP_SOURCES = \
-$(SRC_CODE_DIR)/main.cpp
+$(PROJECT_ROOT_DIR)/main.cpp
 
 # cpp includes '-I'
 CPP_INCLUDES = 
@@ -32,7 +32,7 @@ CFLAGS = -c
 SF =  AFL_USE_UBSAN=1 # AFL_USE_ASAN=1
 
 # compiler
-CXX = ../AFL/afl-g++
+CXX = $(AFL_DIR)/afl-g++
 
 all: $(BUILD_DIR)/$(TARGET)
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(CPP_SOURCES:.cpp=.o)))
@@ -58,4 +58,4 @@ clean-all:
 	rm -rf ./out
 
 test:
-	../AFL/afl-fuzz -i in -o out $(BUILD_DIR)/$(TARGET)
+	$(AFL_DIR)/afl-fuzz -i in -o out $(BUILD_DIR)/$(TARGET)
