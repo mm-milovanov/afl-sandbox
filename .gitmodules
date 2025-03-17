@@ -1,0 +1,3 @@
+[submodule "ext/AFL"]
+	path = ext/AFL
+	url = https://github.com/google/AFL.git
