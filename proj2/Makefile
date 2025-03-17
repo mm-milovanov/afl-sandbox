@@ -5,8 +5,9 @@ TARGET = prog
 OPT = #-Og
 
 # pathes
-PROJECT_ROOT_DIR = .
-AFL_DIR = ../../AFL
+PROJECT_ROOT_DIR = ../
+EXT_DIR = $(PROJECT_ROOT_DIR)/ext
+AFL_DIR = $(EXT_DIR)/AFL
 BUILD_DIR = $(PROJECT_ROOT_DIR)/build
 
 # cpp defines
