@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "../../AFL/afl-record-compat.h"
+#include "../ext/AFL/afl-record-compat.h"
 
 __AFL_FUZZ_INIT();
 

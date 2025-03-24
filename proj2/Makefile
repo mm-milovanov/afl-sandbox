@@ -30,7 +30,7 @@ LFLAGS =
 CFLAGS = -c
 
 # sanitazers flags
-SF =  AFL_USE_UBSAN=1 # AFL_USE_ASAN=1
+SF =  AFL_USE_UBSAN=1 AFL_USE_ASAN=1
 
 # compiler
 CXX = $(AFL_DIR)/afl-g++
